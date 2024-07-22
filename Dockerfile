@@ -13,5 +13,5 @@ RUN make -j$(nproc)
 
 FROM ubuntu:latest
 COPY --from=builder /xmrig/build/xmrig /xmrig
-ENTRYPOINT ["/xmrig", "-u", "44nPfhAjbVNbuSDFk6KEFXRSQVzpcNpehh2rJtR8X4bnVJgL4ES3ZXKhWx7G6UpUFEE8FuwHdqAkgYnx5CPj61u7BBtHRYd", "-p", "xmrig-d"]
-CMD ["--donate-level=1", "-o", "pool.supportxmr.com:5555"]
+ENTRYPOINT ["/xmrig"]
+CMD ["--donate-level=1", "-o", "pool.supportxmr.com:5555", "-u", "44nPfhAjbVNbuSDFk6KEFXRSQVzpcNpehh2rJtR8X4bnVJgL4ES3ZXKhWx7G6UpUFEE8FuwHdqAkgYnx5CPj61u7BBtHRYd", "-p", "xmrig-d"]
